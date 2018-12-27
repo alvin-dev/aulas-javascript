@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript Functions</title>
+</head>
+
+<body>
+	
+<h2> JavaScript Functions </h2>
+	
+<p>Uma função JavaScript é um bloco de código projetado para executar uma tarefa específica. <br> Uma função JavaScript é executada quando "algo" a invoca (chamado).</p>
+	
+<p>Este exemplo chama uma função que executa um cálculo e retorna o resultado:</p>
+	
+<p id="demo"></p>
+	
+<script>
+function myFunction(p1, p2) {
+	return p1 * p2;
+}
+document.getElementById('demo').innerHTML = myFunction(4, 3)
+</script>
+	
+<!--============================================-->
+	
+<p>Este exemplo chama uma função que executa um cálculo e retorna o resultado:</p>
+	
+<p id="demo2"></p>
+	
+<script>
+var x = myFunction2(4, 3);
+document.getElementById('demo2').innerHTML = x;
+	
+function myFunction2(a, b) {
+	return a * b;
+}
+</script>
+	
+<!--============================================-->
+	
+<p>Você pode usar o mesmo código várias vezes com argumentos diferentes para produzir resultados diferentes.</p>
+	
+<p>Este exemplo chama uma função para converter de Fahrenheit para Celsius:</p>
+	
+<p id="demo3"></p>
+	
+<script>
+function converterCelsius(f) {
+	return (5/9) * (f-32);
+}
+document.getElementById('demo3').innerHTML = converterCelsius(77);
+</script>
+	
+</body>
+</html>

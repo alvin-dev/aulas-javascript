@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript Sorting Arrays</title>
+</head>
+
+<body>
+	
+<p>O método sort () classifica uma matriz em ordem alfabética:</p>
+	
+<button onClick="alfabetica()">Try it</button>
+	
+<p id="demo"></p>
+	
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits;
+	
+function alfabetica() {
+	fruits.sort();
+	document.getElementById("demo").innerHTML = fruits;
+}
+</script>
+
+<!--==================================-->	
+	
+<h2>Reversing an Array</h2>	
+	
+<p>O método reverse () inverte os elementos em uma matriz. Você pode usá-lo para classificar uma matriz em ordem decrescente:</p>
+	
+<p id="demo2"></p>
+
+<script>
+// Create and display an array:
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo2").innerHTML = fruits;
+
+function myFunction() {
+    // First sort the array
+    fruits.sort();
+    // Then reverse it:
+    fruits.reverse();
+    document.getElementById("demo2").innerHTML = fruits;
+}
+</script>
+
+<!--==================================-->	
+	
+<p>Ao comparar 40 e 100, o método sort () chama a função de comparação (40,100). A função calcula 40-100 e retorna -60 (um valor negativo).</p>
+	
+<p>A função sort classificará 40 como um valor menor que 100. Você pode usar este snippet de código para experimentar numericamente e alfabeticamente a classificação:</p>
+	
+<button onclick="myFunction1()">Sort Alphabetically</button>
+<button onclick="myFunction2()">Sort Numerically</button>
+
+<p id="demo3"></p>
+
+<script>
+var points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo3").innerHTML = points;
+
+function myFunction1() {
+    points.sort();
+    document.getElementById("demo3").innerHTML = points;
+}
+function myFunction2(){
+	points.sort(function(a, b){return a - b});
+	document.getElementById("demo3").innerHTML = points;
+}
+</script>
+
+<!--==================================-->
+
+<h2>Encontre o valor mais alto (ou mais baixo) da matriz</h2>
+	
+</body>
+</html>

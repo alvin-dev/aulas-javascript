@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript Random</title>
+</head>
+
+<body>
+	
+<h2>Math.random()</h2>
+	
+<p>Math.random () retorna um número aleatório entre 0 (inclusive) e 1 (exclusivo):</p>
+	
+<p id="demo"></p>
+	
+<script>
+document.getElementById('demo').innerHTML = Math.random();
+</script>
+	
+<!--===========================================-->
+	
+<p>Math.random () usado com Math.floor () pode ser usado para retornar inteiros aleatórios.</p>
+
+<button onClick="aleatorio()">Try</button>
+	
+<p id="demo2"></p>
+	
+<script>
+document.getElementById('demo2').innerHTML = Math.floor(Math.random() * 10); // retorna um inteiro aleatório de 0 a 9
+	
+function aleatorio(){
+	document.getElementById('demo2').innerHTML = Math.floor(Math.random() * 10);
+}
+</script>
+	
+<p id="demo3"></p>
+
+<script>
+document.getElementById('demo3').innerHTML = Math.floor(Math.random() * 10) + 1;
+</script>
+	
+<!--===========================================-->
+	
+<p>Toda vez que você clica no botão, getRndInteger (min, max) retorna um número aleatório entre 1 e 10 (ambos incluídos):</p>
+	
+<button onclick="document.getElementById('demo4').innerHTML = getRndInteger(1,10)">Click Me</button>
+
+<p id="demo4"></p>
+
+<script>
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+</script>
+
+	
+</body>
+</html>

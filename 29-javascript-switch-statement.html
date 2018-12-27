@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The JavaScript Switch Statement</title>
+</head>
+
+<body>
+	
+<h2>The JavaScript Switch Statement</h2>
+	
+<p>Use a instrução switch para selecionar um dos muitos blocos de código a serem executados.</p>
+	
+<ul>
+	<li>A expressão de troca é avaliada uma vez. </li>
+	<li>O valor da expressão é comparado com os valores de cada caso.</li>
+	<li>Se houver uma correspondência, o bloco de código associado será executado.</li>
+</ul>
+	
+<p id="demo"></p>
+	
+<script>
+var dia;
+switch (new Date().getDay()){
+	case 0:
+		dia = "Domingo";
+		break;
+	case 1:
+		dia = "Segunda Feira";
+		break;
+	case 2:
+		dia = "Terça Feira";
+		break;
+	case 3:
+		dia = "Quarta Feira";
+		break;
+	case 4:
+		dia = "Quinta Feira";
+		break;
+	case 5:
+		dia = "Sexta Feira";
+		break;
+	case 6: 
+		dia = "Sabado";
+}
+document.getElementById('demo').innerHTML = "Hoje é " + dia;
+</script>
+	
+<p>Quando o JavaScript atinge uma palavra-chave break, ele quebra o bloco de switches. Isso interromperá a execução de mais códigos e testes de casos dentro do bloco. Quando uma correspondência é encontrada e o trabalho é concluído, é hora de uma pausa. Não há necessidade de mais testes.</p>
+	
+<p id="demo2"></p>
+	
+<script>
+var text;
+switch (new Date().getDay()) {
+    case 6:
+        text = "Today is Saturday";
+        break;
+    case 0:
+        text = "Today is Sunday";
+        break;
+    default:
+        text = "Looking forward to the Weekend";
+}
+document.getElementById("demo2").innerHTML = text;
+</script>
+	
+</body>
+</html>

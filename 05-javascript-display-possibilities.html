@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> JavaScript Display Possibilities </title>
+</head>
+
+<body>
+
+<h2>Using innerHTML</h2>
+
+<p id="demo"></p>
+	
+<script>document.getElementById('demo').innerHTML = 5+5</script>
+	
+<!--=====================================================-->
+	
+<h2>Using document.write()</h2>
+
+<script>document.write(5+6)</script>
+	
+<p>Usando document.write () após o carregamento de um documento HTML, todos os HTML existentes serão excluídos:</p>
+
+<button type="button" onClick="document.write(5+8)"> Tentar... </button>
+	
+	<p>O método document.write () deve ser usado apenas para testes.</p>
+	
+<!--=====================================================-->
+	
+<h2>Using window.alert()</h2>
+	
+<p>Você pode usar uma caixa de alerta para exibir dados:</p>
+	
+<script>window.alert(5+6)</script>
+	
+<!--=====================================================-->
+	
+<h2>Using console.log()</h2>
+	
+	<h4>Ativar a depuração com F12</h4>
+	<p>Selecione "Console" no menu do depurador. Em seguida, clique em Executar novamente</p>
+	
+<script>
+console.log(10 + 10);
+</script>
+
+	
+</body>
+</html>

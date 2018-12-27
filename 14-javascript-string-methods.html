@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript String Methods</title>
+</head>
+
+<body>
+
+<h2>Encontrando uma String em uma String</h2>
+	
+<p>O método indexOf () retorna o índice de (a posição de) a primeira ocorrência de um texto especificado em uma string:</p>
+
+<p id="demo"></p>
+
+<script>
+var str = "Por favor, localize onde 'localizar' ocorre!";
+var pos = str.indexOf("localizar");
+document.getElementById('demo').innerHTML = pos;
+</script>
+
+<p>Tanto indexOf () e lastIndexOf () retornam -1 se o texto não for encontrado.</p>
+	
+<!--==========================================-->
+	
+<h2>The slice() Method</h2>
+	
+<p>slice () extrai uma parte de uma string e retorna a parte extraída em uma nova string. <br> O método leva 2 parâmetros: o índice inicial (posição) e o índice final (posição).</p>
+	
+<p id="demo2"></p>
+	
+<script>
+var txt = "Maçã, banana, kiwi";
+var rtr = txt.slice(6, 12);
+document.getElementById('demo2').innerHTML = rtr;
+</script>
+	
+<p>Se um parâmetro for negativo, a posição é contada a partir do final da string. Este exemplo divide uma parte de uma string da posição -12 para a posição -6:</p>
+	
+<p id="demo3"></p>
+	
+<script>
+var txt = "Maçã, banana, kiwi";
+var rtr = txt.slice(-12, -6);
+document.getElementById('demo3').innerHTML = rtr;
+</script>
+	
+<p>Se você omitir o segundo parâmetro, o método dividirá o restante da string:</p>
+	
+<p id="demo4"></p>
+	
+<script>
+var txt = "Maçã, banana, kiwi";
+var rtr = txt.slice(6);
+document.getElementById('demo4').innerHTML = rtr;
+</script>
+	
+<!--==========================================-->
+	
+<h2>Replacing String Content</h2>
+	
+<p>O método replace () substitui um valor especificado por outro valor em uma string:</p>
+	
+<button onClick="myFunction()">Try it</button>
+	
+<p id="demo5">Please visite Microsoft!</p>
+	
+<script>
+function myFunction() {
+	var str = document.getElementById('demo5').innerHTML;
+	var txt = str.replace("Microsoft","W3Schools");
+	document.getElementById('demo5').innerHTML = txt;
+}
+</script>
+	
+<p>Por padrão, a função replace () faz distinção entre maiúsculas e minúsculas. Escrever MICROSOFT (com maiúsculas) não funcionará:</p>
+<p>Para substituir maiúsculas e minúsculas, use uma expressão regular com uma flag / i (insensitive):</p>
+
+<button onclick="substituir()">Try it</button>
+	
+<p id="demo6">Please visite Microsoft!</p>
+	
+<script>
+function substituir(){
+	var txt = document.getElementById('demo6').innerHTML;
+	var sub = txt.replace(/MICROSOFT/i, "W3Schools");
+	document.getElementById('demo6').innerHTML = sub;
+}
+</script>
+	
+<p>Para substituir todas as correspondências, use uma expressão regular com um sinalizador / g (correspondência global):</p>
+	
+<button onClick="subtituirr()">Try it</button>
+	
+<p id="demo7">Please visit Microsoft and Microsoft!</p>
+	
+<script>
+function subtituirr(){
+	var txt = document.getElementById('demo7').innerHTML;
+	var sub = txt.replace(/Microsoft/g, "W3School");
+	document.getElementById('demo7').innerHTML = sub;
+}
+</script>
+
+</body>
+</html>

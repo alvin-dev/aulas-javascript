@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Variáveis JavaScript</title>
+</head>
+
+<body>
+	
+<p>Variáveis JavaScript são contêineres para armazenar valores de dados. <br> Neste exemplo, x, y e z são variáveis:</p>
+
+<p>Ex. <br> 
+var x = 5; <br>
+var y = 6; <br>
+var z = x + y;</p>
+	
+<p id="demo"></p>
+	
+<script>
+	var x = 5;
+	var y = 6;
+	var z = x + y;
+	document.getElementById('demo').innerHTML = "O valor de z é:" + z;
+</script>
+	
+<!--==========================================-->
+	
+<p>Strings são escritas com aspas. <br> Os números são escritos sem aspas.</p>
+	
+<p id="demo2"></p>
+	
+<script>
+var pi = 3.14;
+var person = "Alvin";
+var answer = 'Yes i am!';
+	
+document.getElementById('demo2').innerHTML = pi + "<br>" + person + "<br>" + answer;
+</script>
+	
+</body>
+</html>

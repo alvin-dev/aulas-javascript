@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript Array Iteration Methods</title>
+</head>
+
+<body>
+	
+<h2>Array.forEach()</h2>
+	
+<p>O método forEach () chama uma função (uma função de retorno de chamada) uma vez para cada elemento da matriz.</p>
+	
+<p id="demo"></p>
+	
+<script>
+var txt = "";
+var numbers = [45, 4, 9, 16, 25];
+numbers.forEach(myFunction);
+document.getElementById("demo").innerHTML = txt;
+	
+function myFunction(value, indez, array){
+	txt = txt + value + "<br>"
+}
+</script>
+	
+<!--============================================-->
+	
+<p>O método map () cria uma nova matriz executando uma função em cada elemento da matriz. O método map () não executa a função para elementos de matriz sem valores.</p>
+	
+<p>O método map () não altera o array original. Este exemplo multiplica o valor de cada array por 2:</p>
+
+<p id="demo2"></p>
+	
+<script>
+var numbers1 = [45, 4, 9, 16, 25];
+var numbers2 = numbers1.map(myFunction);
+document.getElementById("demo2").innerHTML = numbers2;
+	
+function myFunction(value, index, array){
+	return value * 2;
+}
+</script>
+	
+<!--============================================-->
+
+<h2>Array.filter()</h2>	
+	
+<p>O método filter () cria uma nova matriz com elementos de matriz que passam em um teste. Este exemplo cria uma nova matriz de elementos com um valor maior que 18:</p>
+	
+<p id="demo3"></p>
+	
+<script>
+var numbers = [45, 4, 9, 16, 25];
+var over18 = numbers.filter(myFunction)
+document.getElementById("demo3").innerHTML = over18;
+
+function myFunction(value, index, array){
+	return value > 18;
+}
+</script>
+	
+<!--============================================-->
+	
+<h2>Array.find()</h2>
+	
+<p>O método find () retorna o valor do primeiro elemento da matriz que passa por uma função de teste. Este exemplo encontra (retorna o valor de) o primeiro elemento maior que 18:</p>	
+	
+<p id="demo3"></p>
+	
+<script>
+var numbers = [4, 9, 16, 25, 29];
+var primeiro = numbers.find(minhafunc);
+document.getElementById('demo3').innerHTML = primeiro;
+	
+function minhafunc(value, index, array){
+	return value > 18;
+}
+</script>
+
+</body>
+</html>

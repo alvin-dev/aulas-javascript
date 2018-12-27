@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript Events</title>
+</head>
+
+<body>
+	
+<p>No exemplo a seguir, um atributo onclick (com código) é adicionado a um elemento de botão:</p>
+
+<button type="button" onclick="document.getElementById('demo').innerHTML = Date()">The time is?</button>
+	
+<p id="demo"></p>
+	
+<p>No próximo exemplo, o código altera o conteúdo de seu próprio elemento (usando this.innerHTML):</p>
+	
+<button onclick="this.innerHTML = Date()">The time is?</button>
+	
+<p>O código JavaScript costuma ter várias linhas. É mais comum ver os atributos do evento chamando funções:</p>
+	
+<button onclick="mostrarHora()">Qual a Hora?</button>
+	
+<p id="demo2"></p>
+	
+<script>
+function mostrarHora() {
+	document.getElementById('demo2').innerHTML = Date();
+}
+</script>
+	
+</body>
+</html>

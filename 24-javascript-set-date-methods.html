@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript Set Date Methods</title>
+</head>
+
+<body>
+	
+<p>Definir métodos de data permitem definir valores de data (anos, meses, dias, horas, minutos, segundos, milissegundos) para um objeto de data.</p>
+	
+<ul>
+	<li>setDate () - Defina o dia como um número (1-31)</li>
+	<li>setFullYear () - Defina o ano (opcionalmente mês e dia)</li>
+	<li>setHours () - Defina a hora (0-23)</li>
+	<li>setMilliseconds () - Configura os milissegundos (0-999)</li>
+	<li>setMinutes () - Defina os minutos (0-59)</li>
+	<li>setMonth () - Defina o mês (0-11)</li>
+	<li>setSeconds () - Define os segundos (0-59)</li>
+	<li>setTime () - Define o tempo (milissegundos desde 1º de janeiro de 1970)</li>
+</ul>
+
+<h2>The setFullYear() Method</h2>
+	
+<p>O método setFullYear () define o ano de um objeto de data. Neste exemplo para 2020:</p>
+	
+<p id="demo"></p>
+	
+<script>
+var d = new Date();
+d.setFullYear(2020);
+document.getElementById('demo').innerHTML = d;
+</script>
+	
+<!--=======================================-->
+	
+<h2>The setDate() Method</h2>
+	
+<p>O método setDate () define o dia de um objeto de data (1-31) <br> O método setDate () também pode ser usado para adicionar dias a uma data:</p>
+	
+<p id="demo2"></p>
+
+<script>
+var d = new Date();
+d.setDate(d.getDate() + 50);
+document.getElementById("demo2").innerHTML = d;
+</script>
+
+<!--=======================================-->
+	
+<h2>Compare Dates</h2>
+	
+<p>As datas podem ser facilmente comparadas. O exemplo a seguir compara a data de hoje com 14 de janeiro de 2100:</p>
+	
+<p id="demo3"></p>
+	
+<script>
+var today, someday, text;
+today = new Date();
+someday = new Date();
+someday.setFullYear(2100, 0, 14);
+
+if (someday > today) {
+	text = "Today is before January 14, 2100.";
+} else {
+	text = "Today is after January 14, 2100.";
+}
+	
+document.getElementById('demo3').innerHTML = text;
+</script>
+	
+	
+	
+	
+</body>
+</html>

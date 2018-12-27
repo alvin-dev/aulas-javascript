@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript Errors - Throw and Try to Catch</title>
+</head>
+
+<body>
+	
+<h2>Input Validation Example</h2>
+	
+<p>Este exemplo examina a entrada. Se o valor estiver errado, uma exceção (err) é lançada. A exceção (err) é capturada pela instrução catch e uma mensagem de erro customizada é exibida:</p>
+
+<p>Por favor insira um número entre 5 e 10:</p>
+
+<input id="demo" type="text">
+<button type="button" onclick="tstcampo()">Test Input</button>
+<p id="erro"></p>
+	
+<script>
+function tstcampo(){
+	var mensagem, x;
+	mensagem = document.getElementById('erro');
+	mensagem.innerHTML = "";
+	x = document.getElementById('demo').value;
+	try {
+		if(x == "") throw "Campo Vazio!";
+		if(isNaN(x)) throw "Não é um numero!";
+		x = Number(x);
+		if(x < 5) throw "Muito menor!";
+		if(x > 5) throw "Muito maior!";
+	}
+	catch(err){
+		mensagem.innerHTML = "ERRO: " + err;
+	}
+}
+</script>
+	
+	
+	
+	
+	
+	
+</body>
+</html>

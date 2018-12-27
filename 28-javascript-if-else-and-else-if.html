@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript if else and else if</title>
+</head>
+
+<body>
+	
+<p>Muitas vezes, quando você escreve um código, você deseja executar ações diferentes para decisões diferentes. <br> Você pode usar instruções condicionais em seu código para fazer isso. Em JavaScript, temos as seguintes declarações condicionais: </p>
+	
+<ul>
+	<li>Use if para especificar um bloco de código a ser executado, se uma condição especificada for verdadeira</li>
+	<li>Use else para especificar um bloco de código a ser executado, se a mesma condição for falsa</li>
+	<li>Use else if para especificar uma nova condição para testar, se a primeira condição for falsa</li>
+	<li>Use o switch para especificar muitos blocos de código alternativos a serem executados</li>
+</ul>
+	
+<p>EX: Faça uma saudação "Bom dia" se a hora for inferior a 18:00</p>
+	
+<p id="demo">Good Evening!</p>
+	
+<script>
+if (new Date().getHours() < 18) {
+	document.getElementById('demo').innerHTML = "Good Day!";
+}	
+</script>
+	
+<!--=====================================-->
+	
+<h2>The else Statement</h2>
+	
+<p>Se a hora for menor que 18, crie uma saudação "Bom dia", caso contrário, "Boa noite":</p>
+
+<button onclick="saldacao()">Try it</button>	
+	
+<p id="demo2"></p>
+	
+<script>
+function saldacao() {
+	var hora = new Date().getHours();
+	var saldar;
+	if (hora < 18){
+		saldar = "Bom Dia!";
+	} else {
+		saldar = "Boa Tarde!";
+	}
+	document.getElementById('demo2').innerHTML = saldar;
+}
+</script>
+	
+<!--=====================================-->
+	
+<h2>The else if Statement</h2>
+	
+<code>
+Syntax <br>
+if (condition1) { <br>
+    block of code to be executed if condition1 is true<br>
+} else if (condition2) {<br>
+    block of code to be executed if the condition1 is false and condition2 is true<br>
+} else {<br>
+    block of code to be executed if the condition1 is false and condition2 is false<br>
+}	
+</code>
+	
+<p>Se o tempo for inferior a 12:00, crie uma saudação "Bom dia", se não, mas o tempo é inferior a 18:00, crie uma saudação "Boa Tarde", caso contrário, uma "Boa noite":</p>
+	
+<button onclick="saldacao()">Try it</button>	
+	
+<p id="demo3"></p>
+	
+<script>
+function saldacao(){
+	var hora = new Date().getHours();
+	var saldar;
+	if (hora < 12){
+		saldar = "Bom Dia!";
+	} else if (hora < 18) {
+		saldar = "Boa Tarde!";
+	} else {
+		saldar = "Boa Noite!";
+	}
+	document.getElementById('demo3').innerHTML = saldar;
+}
+	
+</script>
+	
+</body>
+</html>

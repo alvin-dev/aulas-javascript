@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript Array Methods</title>
+</head>
+
+<body>
+	
+<h2>Converting Arrays to Strings</h2>	
+	
+<p>O método JavaScript toString () converte um array em uma string de valores de um array (separados por vírgula).</p>
+
+<p id="demo"></p>
+	
+<script>
+var fruits = ["Banana", "Orenge", "Apple", "Mango"]
+document.getElementById('demo').innerHTML = fruits.toString();
+</script>
+	
+<p>O método join () também une todos os elementos da matriz em uma string. Ele se comporta como toString (), mas além disso você pode especificar o separador:</p>
+	
+<p id="demo2"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo2").innerHTML = fruits.join(" - ")
+</script>
+	
+<!--==============================================-->
+	
+<h2>Pushing</h2>
+	
+<p>O método push () adiciona um novo elemento a um array (no final):</p>
+	
+<button onClick="myFunction()">Try it</button>	
+	
+<p id="demo3"></p>
+	
+	
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById('demo3').innerHTML = fruits;
+	
+function myFunction(){
+	fruits.push("Kiwi");
+	document.getElementById('demo3').innerHTML = fruits;
+}
+</script>
+	
+
+	
+</body>
+</html>

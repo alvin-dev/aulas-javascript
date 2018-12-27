@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript Get Date Methods</title>
+</head>
+
+<body>
+	
+<p>Esses métodos podem ser usados para obter informações de um objeto de data:</p>
+	
+<ul>
+	<li>getFullYear () - Obtém o ano como um número de quatro dígitos (aaaa)</li>
+	<li>getMonth () - Obtém o mês como um número (0-11)</li>
+	<li>getDate () - Obtém o dia como um número (1-31)</li>
+	<li>getHours () - Obter a hora (0-23)</li>
+	<li>getMinutes () - Obtém o minuto (0-59)</li>
+	<li>getSeconds () - Obtém o segundo (0-59)</li>
+	<li>getMilliseconds () - Obtém o milissegundo (0 a 999)</li>
+	<li>getTime () - Obtém o tempo (milissegundos desde 1º de janeiro de 1970)</li>
+	<li>getDay () - Obtém o dia da semana como um número (0-6)</li>
+	<li>Date.now () - Receba o tempo. ECMAScript 5.</li>
+</ul>
+	
+<h2>The getFullYear() Method</h2>
+	
+<p>O método getFullYear () retorna o ano completo de uma data:</p>
+	
+<p id="demo"></p>
+	
+<script>
+var d = new Date();
+document.getElementById('demo').innerHTML = d.getFullYear();
+</script>
+	
+<!--===============================-->
+	
+<h2>The getMonth() Method</h2>
+	
+<p>O método getMonth () retorna o mês de uma data como um número de 0 a 11.</p>  
+<p> Para obter o mês correto, você deve adicionar 1:</p>
+	
+<p id="demo2"></p>
+
+<script>
+var d = new Date();
+document.getElementById("demo2").innerHTML = d.getMonth() + 1;
+</script>
+	
+<p>Você pode usar uma matriz de nomes e getMonth () para retornar o mês como um nome:</p>
+	
+<p id="demo3"></p>
+	
+<script>
+var d = new Date();
+var meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+document.getElementById('demo3').innerHTML = meses[d.getMonth()];
+</script>
+	
+<!--===============================-->
+	
+<p id="demo4"></p>
+	
+<script>
+var d = new Date();
+var dSemanas = [ 'Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sabado'];
+document.getElementById('demo4').innerHTML = dSemanas[d.getDay()];
+</script>
+	
+</body>
+</html>

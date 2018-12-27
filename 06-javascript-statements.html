@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript Statements</title>
+</head>
+
+<body>
+
+<p>Um programa JavaScript é uma lista de declarações a serem executadas por um computador.</p>
+
+<p id="demo"></p>
+	
+<script>
+	var x, y, z; // declaração 1
+	x = 5; // declaração 2
+	y = 10; // declaração 3
+	z = x + y; // declaração 4
+	
+	document.getElementById('demo').innerHTML = "O valor de z é " + z + ".";
+</script>
+
+<!--==================================================-->
+	
+<h2>JavaScript ponto e virgula</h2>
+<p>As instruções JavaScript são separadas por ponto e vírgula.</p>
+	
+<p id="demo2"></p>
+
+<script>
+	var a, b, c;
+	a = 1;
+	b = 2;
+	c = a + b;
+	
+	document.getElementById('demo2').innerHTML = c;
+</script>
+
+<p>Quando separados por ponto-e-vírgula, várias instruções em uma linha são permitidas:</p>
+	
+<p>EX: a = 5; b = 6; c = a + b;</p>
+	
+<!--==================================================-->
+	
+<p>JavaScript ignora vários espaços. Você pode adicionar espaço em branco ao seu script para torná-lo mais legível.</p>
+<p>EX: <br>var person = "Hege"; <br>
+		var person="Hege";</p>
+	
+	<p>Uma boa prática é colocar espaços ao redor dos operadores (= + - * /):</p>
+	
+<!--==================================================-->
+	
+<h2>Comprimento da linha de JavaScript e quebras de linha</h2>
+	
+<p>Para melhor legibilidade, os programadores geralmente gostam de evitar linhas de código com mais de 80 caracteres. <br> Se uma instrução JavaScript não couber em uma linha, o melhor lugar para quebrá-la é depois de um operador:</p>
+	
+<p>Ex: <br>document.getElementById("demo").innerHTML = <br>
+"Hello Dolly!";</p>
+	
+<!--==================================================-->
+
+<h2>Blocos de Código JavaScript</h2>
+
+<p>As instruções JavaScript podem ser agrupadas em blocos de código, dentro de chaves {...}.</p> <p> O objetivo dos blocos de código é definir instruções para serem executadas juntas.</p> <p> Um lugar onde você encontrará instruções agrupadas em blocos, está nas funções JavaScript: </p>
+	
+<p id="demo01"></p>
+<p id="demo02"></p>
+	
+<button type="button" Onclick="myFunction()"> Clique aqui </button>
+
+<script>
+	function myFunction() {
+		document.getElementById('demo01').innerHTML = "Olá Dolly!";
+		document.getElementById('demo02').innerHTML = "Como vai ?";
+	}
+</script>
+	
+
+</body>
+</html>

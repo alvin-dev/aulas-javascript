@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sem título</title>
+</head>
+
+<body>
+	
+<style>
+	.buttons, .conts{
+		float: left;
+		margin-top: 50px;
+	}
+	.buttons button{
+		display: block;
+	}
+	.contstyle{
+		width: 100px;
+		height: 100px;
+		float: left;
+		display: none;
+	}
+	#cont01{
+		background-color: aqua;
+	}
+	#cont02{
+		background-color:brown;
+	}
+	#cont03{
+		background-color:darkolivegreen;
+	}
+</style>
+	
+<div class="container">
+	
+	<div class="buttons">
+		<button type="button" onClick="document.getElementById('cont01').style.display='block'">botão 1</button>
+		
+		<button type="button" onClick="document.getElementById('cont02').style.display='block'">botão 2</button>
+		
+		<button type="button" onClick="document.getElementById('cont03').style.display='block'">botão 3</button>
+	</div>
+	
+	<div class="conts">
+	
+		<div class="contstyle" id="cont01"></div>
+		
+		<div class="contstyle" id="cont02"></div>
+		
+		<div class="contstyle" id="cont03"></div>
+		
+	</div>
+
+</div>
+	
+	
+</body>
+</html>

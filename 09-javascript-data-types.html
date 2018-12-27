@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript Data Types</title>
+</head>
+
+<body>
+	
+<p>JavaScript tem tipos dinâmicos. Isso significa que a mesma variável pode ser usada para manter diferentes tipos de dados:</p>
+	
+<p id="demo"></p>
+	
+<script>
+var x; // X Esta indefinido 
+x = 5; // X é um numero 
+x = "John"; // X é uma string
+document.getElementById('demo').innerHTML = x;
+</script>
+	
+<!--=====================================-->
+	
+<p>Você pode usar aspas dentro de uma string, desde que não correspondam às aspas que cercam a string:</p>
+	
+<p id="demo2"></p>
+	
+<script>
+var opcao1 = "It's alright";
+var opcao2 = "He is called 'Johnny'";
+var opcao3 = 'He is called "Johnny"';
+
+document.getElementById('demo2').innerHTML = opcao1 + "<br>" + opcao2 + "<br>" + opcao3;
+</script>
+	
+<!--=====================================-->
+	
+<h2>JavaScript Booleans</h2>
+	
+<p>Booleanos podem ter dois valores: verdadeiro ou falso:</p>
+	
+<p id="demo3"></p>
+
+<script>
+var x = 5;
+var y = 5;
+var z = 6;
+document.getElementById('demo3').innerHTML = (x == y) + "<br>" + (x == z);
+</script>
+	
+<!--=====================================-->
+	
+<h2>JavaScript Arrays</h2>
+	
+<p>Matrizes JavaScript são escritas com colchetes. Itens de matriz são separados por vírgulas. O código a seguir declara (cria) uma matriz chamada carros, contendo três itens (nomes de carros):</p>
+	
+<p>Os índices de matriz são baseados em zero, o que significa que o primeiro item é [0].</p>
+	
+<p id="demo4"></p>
+	
+<script>
+var cars = ["BMW", "Volvo", "Mustang"];
+document.getElementById('demo4').innerHTML = cars [2] + "<br>" + typeof cars;
+</script>
+	
+<p>PS. Os índices de matriz são baseados em zero, o que significa que o primeiro item é [0], o segundo é [1] e assim por diante.</p>
+
+<!--=====================================-->
+	
+<h2>JavaScript Objects</h2>
+	
+<p>Objetos JavaScript são escritos com chaves. As propriedades do objeto são gravadas como pares nome: valor, separados por vírgulas.</p>
+	
+<p id="demo5"></p>
+	
+<script>
+var person = {
+	firstName : "John",
+	lastName : "Doe",
+	age : 50,
+	eyeColor : "blue"
+}
+document.getElementById('demo5').innerHTML = person.firstName + " is " + person.age + " years old "
+</script>
+	
+<p>O objeto (person) no exemplo acima possui 4 propriedades: firstName, lastName, age e eyeColor.</p>
+	
+<!--=====================================-->
+
+<p>O operador typeof retorna o tipo de uma variável ou uma expressão.</p>
+
+<p id="demo6"></p>	
+
+<script>
+document.getElementById("demo6").innerHTML = 
+typeof "john" + "<br>" + 
+typeof 3.14 + "<br>" +
+typeof true + "<br>" +
+typeof false + "<br>" +
+typeof x;
+</script>
+
+
+</body>
+</html>
