@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript JSON</title>
+</head>
+
+<body>
+	
+<h2>What is JSON?</h2>
+	
+<p>JSON é um formato para armazenar e transportar dados. <br> O JSON costuma ser usado quando os dados são enviados de um servidor para uma página da web.</p>
+
+<ul>
+	<li>JSON significa <strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation</li>
+	<li>JSON é um formato leve de intercâmbio de dados</li>
+	<li>JSON é independente de idioma *</li>
+	<li>O JSON é "autodescritivo" e fácil de entender</li>
+</ul>
+	
+<p>* A sintaxe JSON é derivada da sintaxe de notação de objeto JavaScript, mas o formato JSON é somente texto. O código para leitura e geração de dados JSON pode ser escrito em qualquer linguagem de programação.</p>
+	
+<p>Essa sintaxe JSON define um objeto de funcionários: uma matriz de 3 registros de funcionários (objetos):</p>
+	
+<code>
+{<br>
+"employees":[ <br>
+  {"firstName":"John", "lastName":"Doe"}, <br>
+  {"firstName":"Anna", "lastName":"Smith"},<br>
+  {"firstName":"Peter", "lastName":"Jones"}<br>
+]<br>
+}
+</code>
+	
+<p>Os dados JSON são gravados como pares nome / valor, assim como as propriedades do objeto JavaScript. <br>Um par de nome / valor consiste em um nome de campo (entre aspas duplas), seguido por dois-pontos, seguido por um valor:</p>
+	
+<code>
+{"firstName":"John", "lastName":"Doe"}	
+</code>
+	
+<h2>Converting a JSON Text to a JavaScript Object</h2>
+	
+<p>Um uso comum do JSON é ler dados de um servidor da web e exibir os dados em uma página da web.<br> Por simplicidade, isso pode ser demonstrado usando uma string como entrada.<br> Primeiro, crie uma string JavaScript contendo a sintaxe JSON:</p>
+	
+<p>Em seguida, use a função interna JSON.parse () do JavaScript para converter a string em um objeto JavaScript:</p>
+	
+<p>Por fim, use o novo objeto JavaScript em sua página:</p>
+	
+<p id="demo"></p>
+	
+<script>
+	
+var text = '{"employees":[' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"Anna","lastName":"Smith" },' +
+'{"firstName":"Peter","lastName":"Jones" }]}';
+	
+var obj = JSON.parse(text);
+document.getElementById("demo").innerHTML =
+obj.employees[2].firstName + " " + obj.employees[2].lastName;
+	
+	
+	
+	</script>
+	
+</body>
+</html>
