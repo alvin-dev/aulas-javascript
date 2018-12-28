@@ -49,7 +49,6 @@
 <p id="demo"></p>
 	
 <script>
-	
 var text = '{"employees":[' +
 '{"firstName":"John","lastName":"Doe" },' +
 '{"firstName":"Anna","lastName":"Smith" },' +
@@ -58,10 +57,7 @@ var text = '{"employees":[' +
 var obj = JSON.parse(text);
 document.getElementById("demo").innerHTML =
 obj.employees[2].firstName + " " + obj.employees[2].lastName;
-	
-	
-	
-	</script>
+</script>
 	
 </body>
 </html>
