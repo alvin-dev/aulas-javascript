@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript Forms</title>
+</head>
+
+<body>
+	
+<p>Validação de formulário HTML pode ser feita por JavaScript. Se um campo de formulário (fname) estiver vazio, essa função alertará uma mensagem e retornará false para evitar que o formulário seja enviado:</p>
+	
+<script>
+function validarForm(){
+	var x = document.forms["meuFormulario"]["seuNome"].value;
+	if (x == "") {
+		alert("Preencha o campo Nome");
+		return false;
+	}
+}
+</script>
+
+<form name="meuFormulario" action="/action.php" onSubmit="return validarForm()" method="post">
+Nome: <input type="text" name="seuNome">
+<input type="submit" value="Enviar">
+</form>
+	
+<!--==========================================-->
+	
+<h2>O JavaScript é frequentemente usado para validar a entrada numérica:</h2>
+	
+<p>Please input a number between 1 and 10:</p>
+	
+<input id="numero">
+	
+<button type="button" onClick="validarNumero()">Enviar</button>
+
+<p id="demo"></p>
+	  
+<script>
+function validarNumero(){
+	var x, text;
+	
+	// Get the value of the input field with id="numb"
+	x = document.getElementById('numero').value;
+	
+	// If x is Not a Number or less than one or greater than 10
+	if (isNaN(x) || x < 1 || x > 10){
+		text = "Campo Invalido !!";
+	} else {
+		text = "Campo valido !!"
+	}
+	document.getElementById("demo").innerHTML = text;
+}
+</script>
+	
+</body>
+</html>
