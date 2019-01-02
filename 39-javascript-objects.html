@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript Objects</title>
+</head>
+
+<body>
+	
+<p>Em JavaScript, os objetos são o rei. Se você entende objetos, entende o JavaScript.</p>
+	
+<p>Em JavaScript, quase "tudo" é um objeto.</p>
+	
+<ul>
+	<li>Booleanos podem ser objetos (se definidos com a nova palavra-chave)</li>
+	<li>Os números podem ser objetos (se definidos com a nova palavra-chave)</li>
+	<li>Strings podem ser objetos (se definidos com a nova palavra-chave)</li>
+	<li>Datas são sempre objetos</li>
+	<li>As matemáticas são sempre objetos</li>
+	<li>Expressões regulares são sempre objetos</li>
+	<li>Arrays são sempre objetos</li>
+	<li>Funções são sempre objetos</li>
+	<li>Objetos são sempre objetos</li>
+	Todos os valores JavaScript, exceto primitivos, são objetos.
+</ul>
+
+<h2>JavaScript Primitives</h2>	
+	
+<p>Um valor primitivo é um valor que não possui propriedades ou métodos. <br> Um tipo de dados primitivo é um dado que possui um valor primitivo.<br> JavaScript define 5 tipos de tipos de dados primitivos:</p>
+	
+<ul>
+	<li>string</li>
+	<li>number</li>
+	<li>boolean</li>
+	<li>null</li>
+	<li>undefined</li>
+</ul>
+	
+<p>Valores primitivos são imutáveis (eles são codificados e, portanto, não podem ser alterados).</p>
+	
+<p>OBS: se x = 3,14, você pode alterar o valor de x. Mas você não pode alterar o valor de 3,14.</p>
+	
+<p>O objeto x não é uma cópia de pessoa. Ele é pessoa. Tanto x quanto pessoa são o mesmo objeto. Quaisquer mudanças em x também mudarão de pessoa, porque x e pessoa são o mesmo objeto.</p>
+	
+<p id="demo"></p>
+
+<script>
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}
+
+var x = person;
+x.age = 10;
+
+document.getElementById("demo").innerHTML =
+person.firstName + " is " + person.age + " years old.";
+</script>
+
+	
+	
+	
+	
+	
+</body>
+</html>
