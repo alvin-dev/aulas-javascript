@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript Object Properties</title>
+</head>
+
+<body>
+
+<p>Propriedades são a parte mais importante de qualquer objeto JavaScript.</p>
+	
+<p>Propriedades são os valores associados a um objeto JavaScript. <br> Um objeto JavaScript é uma coleção de propriedades não ordenadas. <br> As propriedades geralmente podem ser alteradas, adicionadas e excluídas, mas algumas são somente leitura.</p>
+	
+<h2>Accessing JavaScript Properties</h2>
+	
+<p>A sintaxe para acessar a propriedade de um objeto é:</p>
+	
+<code>
+	objectName.property         // person.age <br>
+	
+	ou<br>
+	
+	objectName["property"]      // person["age"]<br>
+	
+	ou<br>
+	
+	objectName[expression]      // x = "age"; person[x]
+</code>
+	
+<p id="demo"></p>
+
+<script>
+var person = {
+  firstname:"John",
+  lastname:"Doe",
+  age:50,
+  eyecolor:"blue"
+};
+
+document.getElementById("demo").innerHTML = person.firstname + " is " + person.age + " years old.";
+</script>	
+	
+<h2>JavaScript for...in Loop</h2>
+	
+<p>O JavaScript for ... in instrução faz um loop pelas propriedades de um objeto. <br> O bloco de código dentro do loop for ... in será executado uma vez para cada propriedade. </p>
+	
+<p id="demo2"></p>
+	
+<script>
+	
+var txt = "";
+var person = {nome:"Alvaro", sNome:"Guedes", idade:26};
+var x;
+	
+// delete person.idade; Comando para deletar uma propriedade do objeto
+	
+// A palavra-chave delete exclui o valor da propriedade e a propriedade em si. Após a exclusão, a propriedade não pode ser usada antes de ser adicionada novamente.
+	
+//O operador delete foi projetado para ser usado nas propriedades do objeto. Não tem efeito sobre variáveis ou funções. O operador delete não deve ser usado em propriedades de objeto JavaScript predefinidas. Ele pode travar seu aplicativo.
+	
+for (x in person) {
+	txt += person[x] + " ";
+}
+document.getElementById('demo2').innerHTML = txt;
+</script>
+	
+<h2>Adding New Properties</h2>
+	
+<p>Você pode adicionar novas propriedades a um objeto existente simplesmente atribuindo-lhe um valor. <br> Suponha que o objeto pessoa já exista - você pode então dar a ele novas propriedades:</p>
+
+<p id="demo3"></p>
+	
+<script>
+	
+var person = {nome:"Alvaro", sNome:"Guedes", idade:26};
+
+person.nacionality = "Brazilian";
+	
+document.getElementById('demo3').innerHTML = person.nome + ", " + person.nacionality;
+</script>
+	
+</body>
+</html>
