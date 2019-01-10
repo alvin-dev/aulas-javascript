@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript Object Constructors</title>
+</head>
+
+<body>
+	
+<h2>Object Types (Blueprints) (Classes)</h2>
+	
+<p>Às vezes precisamos de um "plano" para criar muitos objetos do mesmo "tipo". <br> A maneira de criar um "tipo de objeto" é usar uma função construtora de objetos. <br> No exemplo acima, a função Person () é uma função de construtor de objeto.</p>
+	
+<p>Objects of the same type are created by calling the constructor function with the new keyword:</p>
+	
+<p id="demo"></p>
+	
+<script>
+
+// Função de construtor para objetos Person
+function Person(first, last, age, eye){
+	this.firstName = first;
+	this.lastName = last;
+	this.age = age;
+	this.eyeColor = eye;
+	/*this.changeName = function (name) { this.lastName = name; }*/
+}
+	
+//Crie dois objetos Person
+var mae = new Person("John", "Doe", 50, "blue");
+var pai = new Person("Sally", "Rally", 48, "green");
+	
+//Add a name method to first object
+/*
+myFather.name = function() {
+  return this.firstName + " " + this.lastName;
+};
+*/
+	
+// Change last name
+//myMother.changeName("Doe");
+
+// Display age
+document.getElementById("demo").innerHTML = 
+"My father is " + mae.age + ". My mother is " + pai.age + "."; 
+</script>
+	
+<h2>The this Keyword</h2>
+	
+<p>Em JavaScript, a coisa chamada "this" é o objeto que "possui" o código.</p>
+	
+<p>O valor "this", quando usado em um objeto, é o próprio objeto.</p>
+	
+<p>Em uma função de construtor, "this" não tem um valor. É um substituto para o novo objeto. O valor "this" se tornará o novo objeto quando um novo objeto for criado. </p>
+	
+	
+	
+	
+	
+</body>
+</html>
