@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript Object Prototypes</title>
+</head>
+
+<body>
+	
+<h2>Herança de protótipo</h2>
+
+<p>Todos os objetos JavaScript herdam propriedades e métodos de um protótipo:</p>
+	
+<ul>
+	<li>Os objetos de "date" herdam de Date.prototype</li>
+	<li>Objetos de "array" herdam de Array.prototype</li>
+	<li>Objetos de "person" herdam de Person.prototype</li>
+</ul>
+	
+<p>O Object.prototype está no topo da cadeia de herança do protótipo: <br>
+Objetos de data, objetos Array e objetos Person herdam de Object.prototype.</p>
+	
+<h2>Using the prototype Property</h2>	
+	
+<p>A propriedade prototype do JavaScript permite adicionar novas propriedades aos construtores de objeto:</p>
+	
+<p id="demo"></p>
+
+<script>
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+
+Person.prototype.nationality = "English";
+
+var myFather = new Person("John", "Doe", 50, "blue");
+document.getElementById("demo").innerHTML =
+"My father is " + myFather.nationality; 
+</script>
+	
+	
+	
+	
+</body>
+</html>
