@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript ES5 Object Methods</title>
+</head>
+
+<body>
+	
+<h2>Changing a Property Value</h2>
+	
+<code>Object.defineProperty(object, property, {value : value})</code>
+
+<p id="demo"></p>
+
+<script>
+// Create an object:
+var person = {
+  firstName: "John",
+  lastName : "Doe",
+  language : "EN" 
+};
+// Change a property
+Object.defineProperty(person, "language", {value:"NO"})
+document.getElementById("demo").innerHTML = person.language;
+</script>
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>
