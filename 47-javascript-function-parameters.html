@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript Function Parameters</title>
+</head>
+
+<body>
+	
+<p>Uma função JavaScript não executa nenhuma verificação nos valores de parâmetros (argumentos).</p>
+	
+<h2>Function Parameters and Arguments</h2>
+
+<p>Anteriormente neste tutorial, você aprendeu que as funções podem ter parâmetros:</p>
+	
+<code>
+function functionName(parameter1, parameter2, parameter3) { <br>
+  // code to be executed <br>
+}	
+</code>	
+	
+<p>Parâmetros de função são os nomes listados na definição da função. <br> Argumentos de função são os valores reais passados para (e recebidos pela) função.</p>
+	
+<h2>The Arguments Object</h2>	
+	
+<p>As funções JavaScript têm um objeto interno chamado de objeto de argumentos. <br> O objeto argumento contém uma matriz dos argumentos usados quando a função foi chamada (invocada).</p>
+
+<p>Desta forma, você pode simplesmente usar uma função para encontrar (por exemplo) o maior valor em uma lista de números:</p>
+	
+<p id="demo"></p>
+	
+<script>
+function findMax(){
+	var i;
+	var max = -Infinity;
+	for(i = 0; i < arguments.length; i++){
+		if (arguments[i] > max){
+			max = arguments[i];
+		}
+	}
+	return max;
+}
+document.getElementById('demo').innerHTML = findMax(4, 5, 6);	
+</script>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>
