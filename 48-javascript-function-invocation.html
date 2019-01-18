@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript Function Invocation</title>
+</head>
+
+<body>
+	
+<p>O código dentro de uma função JavaScript será executado quando "alguma coisa" o invocar.</p>
+	
+<h2>Invoking a JavaScript Function</h2>
+	
+<p>O código dentro de uma função não é executado quando a função é definida. O código dentro de uma função é executado quando a função é invocada. É comum usar o termo "chamar uma função" em vez de "invocar uma função".</p>
+	
+<p>Também é comum dizer "chamar uma função", "iniciar uma função" ou "executar uma função". Neste tutorial, usaremos invoke, porque uma função JavaScript pode ser chamada sem ser chamada.</p>	
+	
+<h2>Invoking a Function as a Function</h2>	
+	
+<p id="demo"></p>
+	
+<script>
+function myFunction(a, b) {
+  return a * b;
+}
+document.getElementById("demo").innerHTML = myFunction(10, 2); 
+</script>
+	
+<p>A função acima não pertence a nenhum objeto. Mas no JavaScript há sempre um objeto global padrão. Em HTML, o objeto global padrão é a própria página HTML, portanto, a função acima "pertence" à página HTML.</p>
+	
+<p>Em um navegador, o objeto de página é a janela do navegador. A função acima se torna automaticamente uma função de janela. myFunction () e window.myFunction () é a mesma função:</p>
+	
+<p>OBS: Essa é uma maneira comum de invocar uma função JavaScript, mas não é uma prática muito boa. Variáveis globais, métodos ou funções podem facilmente criar conflitos de nome e erros no objeto global.</p>
+	
+<h2>Invoking a Function as a Method</h2>
+	
+<p>Em JavaScript, você pode definir funções como métodos de objeto. <br> O exemplo a seguir cria um objeto (myObject), com duas propriedades (firstName e lastName) e um método (fullName):</p>
+	
+<p id="demo2"></p>
+
+<script>
+var myObject = {
+  firstName:"John",
+  lastName: "Doe",
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+document.getElementById("demo2").innerHTML = myObject.fullName(); 
+</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>
