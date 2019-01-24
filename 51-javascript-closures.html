@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript Closures</title>
+</head>
+
+<body>
+	
+<p>Variáveis JavaScript podem pertencer ao escopo local ou global. Variáveis globais podem ser feitas locais (privadas) com fechamentos.</p>
+	
+<h2>Variáveis globais</h2>
+	
+<p>Uma função pode acessar todas as variáveis definidas dentro da função, assim:</p>
+	
+<button type="button" onclick="myFunction()">Click Me!</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var a = 4;
+  document.getElementById("demo").innerHTML = a * a;
+} 
+</script>
+	
+<p>Mas uma função também pode acessar variáveis definidas fora da função, assim:</p>
+	
+<button type="button" onclick="myFunction()">Click Me!</button>
+
+<p id="demo2"></p>
+
+<script>
+var a = 4;
+function myFunction() {
+  document.getElementById("demo2").innerHTML = a * a;
+} 
+</script>
+	
+<p>Variáveis globais e locais com o mesmo nome são variáveis diferentes. Modificando um, não modifica o outro.</p>
+	
+</body>
+</html>

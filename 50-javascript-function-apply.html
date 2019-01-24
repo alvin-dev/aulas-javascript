@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript Function Apply</title>
+</head>
+
+<body>
+	
+<h2>The JavaScript apply() Method</h2>
+	
+<p>Com o método apply (), você pode escrever um método que pode ser usado em objetos diferentes.</p>
+	
+<p>O método apply () é semelhante ao método call () (capítulo anterior). Neste exemplo, o método fullName da pessoa é aplicado em person1:</p>
+
+	
+<p id="demo"></p>
+
+<script>
+var person = {
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+var person1 = {
+  firstName:"John",
+  lastName: "Doe",
+}
+var x = person.fullName.apply(person1); 
+document.getElementById("demo").innerHTML = x; 
+</script>
+	
+<h2>The Difference Between call() and apply()</h2>
+	
+<p>A diferença é: O método call () recebe argumentos separadamente. <br> O método apply () aceita argumentos como uma matriz.</p>
+	
+<p>OBS: O método apply () é muito útil se você quiser usar uma matriz em vez de uma lista de argumentos.</p>
+
+<p>O método apply () aceita argumentos em uma matriz:</p>	
+	
+<p id="demo2"></p>
+
+<script>
+var person = {
+  fullName: function(city, country) {
+    return this.firstName + " " + this.lastName + "," + city + "," + country;
+  }
+}
+var person1 = {
+  firstName:"John",
+  lastName: "Doe",
+}
+var x = person.fullName.apply(person1, ["Oslo", "Norway"]); 
+document.getElementById("demo2").innerHTML = x; 
+</script>
+	
+</body>
+</html>
