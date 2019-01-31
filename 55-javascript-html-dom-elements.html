@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript HTML DOM Elements</title>
+</head>
+
+<body>
+	
+<h2>Finding HTML Elements</h2>
+	
+<p>Muitas vezes, com JavaScript, você quer manipular elementos HTML. Para fazer isso, você precisa encontrar os elementos primeiro. Existem várias maneiras de fazer isso:</p>
+	
+<ul>
+	<li>Encontrando elementos HTML por id</li>
+	<li>Encontrando elementos HTML pelo nome da tag</li>
+	<li>Encontrando elementos HTML por nome de classe</li>
+	<li>Encontrando elementos HTML por seletores CSS</li>
+	<li>Encontrando elementos HTML por coleções de objetos HTML</li>
+</ul>
+	
+<h2>Finding HTML Element by Id</h2>
+	
+<p>A maneira mais fácil de encontrar um elemento HTML no DOM é usando o ID do elemento. Este exemplo encontra o elemento com id = "intro":</p>
+	
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 
+"Hello World!";
+</script>
+	
+<h2>Finding HTML Elements by Tag Name</h2>
+	
+<p>Este exemplo encontra todos os elementos &lt;p&gt;:</p>
+
+<div id="main">
+<p>Hello World!</p>
+<p>Olá Mundo !!</p>
+</div>
+	
+<p id="demo2"></p>
+	
+<script>
+var x = document.getElementById('main');
+var y =	x.document.getElementsByTagName("p");
+	
+document.getElementById("demo2").innerHTML = 
+y;
+</script>
+	
+<h2>Finding HTML Elements by Class Name</h2>
+	
+<p>Se você quiser encontrar todos os elementos HTML com o mesmo nome de classe, use getElementsByClassName (). Este exemplo retorna uma lista de todos os elementos com class = "intro".</p>
+	
+<p class="intro">The DOM is very useful.</p>
+<p class="intro">This example demonstrates the <b>getElementsByClassName</b> method.</p>
+
+<p id="demo3"></p>
+
+<script>
+var x = document.getElementsByClassName("intro");
+document.getElementById("demo3").innerHTML = 
+'O primeiro parágrafo (index 0) com class = "intro" ' + x[0].innerHTML;
+</script>
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>
