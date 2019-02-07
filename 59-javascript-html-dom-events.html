@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript HTML DOM Events</title>
+</head>
+
+<body>
+	
+<h2>Reacting to Events</h2>
+	
+<p>Um JavaScript pode ser executado quando ocorre um evento, como quando um usuário clica em um elemento HTML. <br> Para executar código quando um usuário clica em um elemento, adicione o código JavaScript a um atributo de evento HTML:</p>
+	
+<code>onclick=JavaScript</code>
+	
+<p>Exemplos de eventos HTML:</p>
+
+<ul>
+	<li>Quando um usuário clica no mouse</li>
+	<li>Quando uma página da web foi carregada</li>
+	<li>Quando uma imagem foi carregada</li>
+	<li>Quando o mouse se move sobre um elemento</li>
+	<li>Quando um campo de entrada é alterado</li>
+	<li>Quando um formulário HTML é enviado</li>
+	<li>Quando um usuário pressiona uma tecla</li>
+</ul>
+	
+<p>Neste exemplo, o conteúdo do elemento h1 é alterado quando um usuário clica nele:</p>
+	
+<h1 style="cursor: pointer" onclick="this.innerHTML='Ooops!'">Click on this text!</h1>
+	
+<p>Neste exemplo, uma função é chamada do manipulador de eventos:</p>
+	
+<h1 onclick="mudarTxt(this)">Clique para mudar o texto !!</h1>
+	
+<script>
+function mudarTxt(muda){
+	muda.innerHTML = "Ooops!"
+}	
+</script>
+	
+<h2>Assign Events Using the HTML DOM</h2>
+	
+<p>O HTML DOM permite que você atribua eventos a elementos HTML usando JavaScript:</p>
+	
+<button id="myBtn">Mostrar Data !!</button>
+	
+<p id="demo"></p>
+	
+<script>
+document.getElementById('myBtn').onclick = mostrarData;	
+	
+function mostrarData(){
+	document.getElementById('demo').innerHTML = Date();
+}
+</script>
+	
+<p>No exemplo acima, uma função denominada displayDate é atribuída a um elemento HTML com o id = "myBtn". A função será executada quando o botão for clicado.</p>
+	
+<h2>The onchange Event</h2>	
+
+<p>O evento onchange é frequentemente usado em combinação com a validação de campos de entrada. Abaixo está um exemplo de como usar o onchange. A função upperCase () será chamada quando um usuário alterar o conteúdo de um campo de entrada.</p>
+	
+Digite seu nome: <input type="text" id="snome" onchange="txtGrande()">
+
+<script>
+function txtGrande(){
+	var x = document.getElementById('snome');
+	x.value = x.value.toUpperCase();
+}
+</script>
+	
+<p>Quando você sai do campo de entrada, uma função é acionada, o que transforma o texto de entrada em maiúscula.</p>	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+</body>
+</html>
