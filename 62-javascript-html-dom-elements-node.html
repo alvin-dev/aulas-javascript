@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript HTML DOM Elements (Nodes)</title>
+</head>
+
+<body>
+	
+<h2>Creating New HTML Elements (Nodes)</h2>
+	
+<p>Para adicionar um novo elemento ao HTML DOM, crie primeiro o elemento (element node) e, em seguida, anexe-o a um elemento existente.</p>
+
+<div id="div1">
+<p id="p1">This is a paragraph.</p>
+<p id="p2">This is another paragraph.</p>
+</div>	
+	
+<script>
+var paragrafo = document.createElement("p");
+var texto = document.createTextNode("This is new");
+paragrafo.appendChild(texto);
+var element = document.getElementById("div1");
+element.appendChild(paragrafo);
+</script>
+	
+<h2>Creating new HTML Elements - insertBefore()</h2>
+	
+<p>O método appendChild () no exemplo anterior, anexou o novo elemento como o último filho do pai. Se você não quer que você possa usar o método insertBefore ():</p>
+	
+<div id="div2">
+<p id="p01">This is a paragraph.</p>
+<p id="p02">This is another paragraph.</p>
+</div>
+
+<script>
+var para = document.createElement("p");
+var node = document.createTextNode("This is new.");
+para.appendChild(node);
+
+var element = document.getElementById("div2");
+var child = document.getElementById("p01");
+element.insertBefore(para,child);
+</script>
+	
+<h2>Removing Existing HTML Elements</h2>
+	
+<p>Para remover um elemento HTML, você deve conhecer o pai do elemento:</p>	
+	
+<div id="div3">
+<p id="p3">This is a paragraph.</p>
+<p id="p03">This is another paragraph.</p>
+</div>
+	
+<script>
+var pai = document.getElementById('div3');
+var filho = document.getElementById('p03');
+pai.removeChild(filho);
+</script>
+	
+<h2>Replacing HTML Elements </h2>
+	
+<p>Para substituir um elemento no HTML DOM, use o método replaceChild ():</p>
+
+<div id="div4">
+<p id="p4">This is a paragraph.</p>
+<p id="p04">This is another paragraph.</p>
+</div>
+	
+<script>
+	
+var pai = document.getElementById("div4");
+var filho = document.getElementById("p4");
+var paragrafo = document.createElement("p");
+var texto = document.createTextNode("This is new.");
+	
+paragrafo.appendChild(texto);
+pai.replaceChild(paragrafo, filho);
+	
+</script>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>
