@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript Window - The Browser Object Model</title>
+</head>
+
+<body>
+	
+<p>O Browser Object Model (BOM) permite que o JavaScript "fale com" o navegador.</p>
+	
+<h2>The Window Object</h2>
+	
+<p>O window object é suportado por todos os navegadores. Representa a janela do navegador. Todos os objetos, funções e variáveis globais do JavaScript tornam-se automaticamente membros do objeto da janela. Variáveis globais são propriedades do objeto da janela.</p>
+	
+<p>Funções globais são métodos do objeto de janela. Até mesmo o objeto de documento (do HTML DOM) é uma propriedade do objeto da janela:</p>
+	
+<p id="demo"></p>
+
+<script>
+var w = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+
+var h = window.innerHeight
+|| document.documentElement.clientHeight
+|| document.body.clientHeight;
+
+var x = document.getElementById("demo");
+x.innerHTML = "Browser inner window width: " + w + ", height: " + h + ".";
+</script>
+	
+</body>
+</html>

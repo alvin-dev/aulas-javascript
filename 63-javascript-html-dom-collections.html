@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript HTML DOM Collections</title>
+</head>
+
+<body>
+	
+<h2>The HTMLCollection Object</h2>
+	
+<p>O método getElementsByTagName () retorna um objeto HTMLCollection. Um objeto HTMLCollection é uma lista do tipo matriz (coleção) de elementos HTML.</p>
+	
+<p>O código a seguir seleciona todos os elementos &lt;p&gt; em um documento:</p>
+	
+
+<p id="demo"></p>
+
+<script>
+var myCollection = document.getElementsByTagName("p");
+document.getElementById("demo").innerHTML =
+"The innerHTML of the second paragraph is: " +
+myCollection[1].innerHTML;
+</script>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>
