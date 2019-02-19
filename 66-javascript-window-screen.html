@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript Window Screen</title>
+</head>
+
+<body>
+	
+<p>O objeto window.screen contém informações sobre a tela do usuário.</p>	
+	
+<h2>Window Screen</h2>
+	
+<p>O objeto window.screen pode ser gravado sem o prefixo da janela.</p>
+	
+<p>Propriedades:</p>	
+	
+<ul>
+	<li>screen.width</li>
+	<li>screen.height</li>
+	<li>screen.availWidth</li>
+	<li>screen.availHeight</li>
+	<li>screen.colorDepth</li>
+	<li>screen.pixelDepth</li>
+</ul>
+	
+<h2>Window Screen Width</h2>	
+	
+<p>A propriedade screen.width retorna a largura da tela do visitante em pixels.</p>
+	
+<p id="demo"></p>
+	
+<script>
+document.getElementById('demo').innerHTML = "Screen width is" + screen.width;	
+</script>	
+	
+<h2>Window Screen Height</h2>
+	
+<p>A propriedade screen.height retorna a altura da tela do visitante em pixels.</p>
+	
+<p id="demo2"></p>
+
+<script>
+document.getElementById("demo2").innerHTML = 
+"Screen height is " + screen.height;
+</script>
+	
+<h2>Window Screen Available Width</h2>
+	
+<p>A propriedade screen.availWidth retorna a largura da tela do visitante, em pixels, menos os recursos da interface, como a Barra de Tarefas do Windows.</p>
+	
+<p id="demo3"></p>
+
+<script>
+document.getElementById("demo3").innerHTML = 
+"Available screen width is " + screen.availWidth;
+</script>
+	
+</body>
+</html>
