@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Popup Boxes</title>
+</head>
+
+<body>
+
+    <p>O JavaScript possui três tipos de caixas pop-up: caixa de alerta,
+        caixa de confirmação e caixa de prompts.
+    </p>
+
+    <h2>Alert Box</h2>
+
+    <p>Uma caixa de alerta é freqüentemente usada se você quiser 
+        garantir que as informações cheguem ao usuário. Quando
+        uma caixa de alerta aparecer, o usuário terá que clicar em "OK"
+        para prosseguir.
+    </p>
+
+<button onclick="myFunction()">Click Me!</button>
+
+<script>
+function myFunction (){
+    alert("I am an alert box");
+}
+</script>
+
+<h2>Confirm Box</h2>
+
+<p>Uma caixa de confirmação é freqüentemente usada se você quiser que 
+    o usuário verifique ou aceite alguma coisa. Quando uma caixa de 
+    confirmação aparece, o usuário terá que clicar em "OK" ou 
+    "Cancelar" para prosseguir.
+</p>
+
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+
+<script>
+function myFunction (){
+    var txt;
+    if (confirm("Press a button!")){
+        txt = "You pressed OK!";
+    } else {
+        txt = "You pressed Cancel!";
+    }
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+<h2>Prompt Box</h2>
+
+<p>Uma caixa de aviso é frequentemente usada se você quiser que o 
+    usuário insira um valor antes de entrar em uma página. Quando uma 
+    caixa de aviso aparecer, o usuário terá que clicar em "OK" ou 
+    "Cancelar" para prosseguir após inserir um valor de entrada.
+</p>
+
+<code>window.prompt("sometext","defaultText");</code>
+
+<p>Se o usuário clicar em "OK", a caixa retornará o valor de entrada. 
+    Se o usuário clicar em "Cancelar", a caixa retornará nulo.
+</p>
+
+<button onclick="myFunction2()">Try it</button>
+
+<p id="demo2"></p>
+
+<script>
+function myFunction2 (){
+    var txt;
+    var person = prompt("Please enter your name:", "name Here");
+    if (person == null || person == "") {
+        txt = "User cancelled the prompt.";
+    } else {
+        txt = "Hello " + person + "! How are you today?";
+    }
+    document.getElementById("demo2").innerHTML = txt;
+}
+</script>
+
+<h2>Line Breaks</h2>
+
+<p>Para exibir as quebras de linha dentro de uma caixa pop-up, use 
+    uma barra invertida seguida do caractere n.</p>
+
+<code>alert("Hello\nHow are you?");</code>
+
+</body>
+</html>
