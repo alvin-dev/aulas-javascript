@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JavaScript Timing Events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h2>Timing Events</h2>
+
+<p>
+    O objeto de janela permite a execução de código em intervalos de tempo especificados. Esses intervalos de tempo são chamados de eventos de sincronização. Os dois principais métodos para usar com JavaScript são:
+</p>
+
+<lu>
+    <li>setTimeout(function, milliseconds) Executa uma função, após aguardar um número especificado de milissegundos.</li>
+    <li>setInterval(function, milliseconds) O mesmo que setTimeout (), mas repete a execução da função continuamente. </li>
+</lu>
+
+<p>OBS: O setTimeout () e setInterval () são os dois métodos do objeto HTML DOM Window.</p>
+
+<h2>The setTimeout() Method</h2>
+    
+<code>window.setTimeout(function, milliseconds);</code>
+
+<p>O método window.setTimeout () pode ser escrito sem o prefixo  window. O primeiro parâmetro é uma função a ser executada. O segundo parâmetro indica o número de milissegundos antes da execução.</p>
+
+<button onclick="setTimeout(myFunction, 2000)">Try it</button>
+
+<script>
+function myFunction() {
+    alert ("Hello!");
+}
+</script>
+
+<h2>How to Stop the Execution?</h2>
+
+<p>O método clearTimeout () interrompe a execução da função especificada em setTimeout ().</p>
+
+<code>window.clearTimeout(timeoutVariable)</code>
+
+<p>O método window.clearTimeout () pode ser escrito sem o prefixo window. O método clearTimeout () usa a variável retornada de setTimeout ():</p>
+
+<code>
+    myVar = setTimeout(function, milliseconds); <br>
+    clearTimeout(myVar);
+</code>
+
+<p>Se a função ainda não foi executada, você pode parar a execução chamando o método clearTimeout ():</p>
+
+<h2>The setInterval() Method</h2>
+
+<p>O método setInterval () repete uma determinada função a cada intervalo de tempo especificado.
+</p>
+
+<code>window.setInterval(function, milliseconds);</code>
+
+<p>O método window.setInterval () pode ser escrito sem o prefixo window. O primeiro parâmetro é a função a ser executada. O segundo parâmetro indica a duração do intervalo de tempo entre cada execução.
+</p>
+
+<p>Este exemplo executa uma função chamada "myTimer" uma vez a cada segundo (como um relógio digital).</p>
+
+<p id="demo"></p>
+
+<script>
+var minhaVariavel = setInterval(meuRelogio, 1000)
+
+function meuRelogio(){
+    var hora = new Date();
+    document.getElementById('demo').innerHTML = hora.toLocaleTimeString();
+}
+
+</script>
+
+</body>
+</html>
