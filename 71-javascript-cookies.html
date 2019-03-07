@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Cookies</title>
+
+    <script>
+            function setCookie(cname,cvalue,exdays) {
+              var d = new Date();
+              d.setTime(d.getTime() + (exdays*24*60*60*1000));
+              var expires = "expires=" + d.toGMTString();
+              document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+            }
+            
+            function getCookie(cname) {
+              var name = cname + "=";
+              var decodedCookie = decodeURIComponent(document.cookie);
+              var ca = decodedCookie.split(';');
+              for(var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                  c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                  return c.substring(name.length, c.length);
+                }
+              }
+              return "";
+            }
+            
+            function checkCookie() {
+              var user=getCookie("username");
+              if (user != "") {
+                alert("Welcome again " + user);
+              } else {
+                 user = prompt("Please enter your name:","");
+                 if (user != "" && user != null) {
+                   setCookie("username", user, 30);
+                 }
+              }
+            }
+            </script>
+
+</head>
+<body onload="checkCookie()">
+
+<p>Os cookies permitem que você armazene informações do usuário em páginas da web.</p>
+    
+<h2>What are Cookies?</h2>
+
+<p>Cookies são dados, armazenados em pequenos arquivos de texto, no seu computador. Quando um servidor da Web envia uma página da Web a um navegador, a conexão é encerrada e o servidor esquece tudo sobre o usuário.</p>
+
+<p>Os cookies foram inventados para resolver o problema "como lembrar informações sobre o usuário":</p>
+
+<ul>
+    <li>Quando um usuário visita uma página da web, seu nome pode ser armazenado em um cookie.</li>
+    <li>Na próxima vez que o usuário visitar a página, o cookie "lembra" o nome dele.</li>
+</ul>
+
+<p>Quando um navegador solicita uma página da Web de um servidor, os cookies pertencentes à página são adicionados à solicitação. Desta forma, o servidor obtém os dados necessários para "lembrar" as informações sobre os usuários.</p>
+
+<p>OBS: Nenhum dos exemplos abaixo funcionará se o seu navegador tiver o suporte a cookies locais desativado.</p>
+
+<h2>Create a Cookie with JavaScript</h2>
+
+<p>O JavaScript pode criar, ler e excluir cookies com a propriedade document.cookie. Com JavaScript, um cookie pode ser criado assim:</p>
+
+<code>document.cookie = "username=John Doe";</code>
+
+<p>Você também pode adicionar uma data de expiração (no horário UTC). Por padrão, o cookie é excluído quando o navegador é fechado:</p>
+
+<code>document.cookie = "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC";</code>
+
+<p>Com um parâmetro de caminho, você pode informar ao navegador a que caminho o cookie pertence. Por padrão, o cookie pertence à página atual.</p>
+
+<code>document.cookie = "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";</code>
+
+<h2>Read a Cookie with JavaScript</h2>
+
+<p>Com o JavaScript, os cookies podem ser lidos da seguinte forma:</p>
+
+<code>var x = document.cookie;</code>
+
+<h2>JavaScript Cookie Example</h2>
+
+<p>No exemplo a seguir, criaremos um cookie que armazena o nome de um visitante. Na primeira vez que um visitante chegar à página da Web, ele será solicitado a preencher seu nome. O nome é então armazenado em um cookie.</p>
+
+<p>Na próxima vez que o visitante chegar na mesma página, ele receberá uma mensagem de boas-vindas. Para o exemplo, criaremos 3 funções JavaScript:</p>
+
+<ul>
+    <li>Uma função para definir um valor de cookie</li>
+    <li>Uma função para obter um valor de cookie</li>
+    <li>Uma função para verificar um valor de cookie</li>
+</ul>
+
+
+
+
+
+
+</body>
+</html>
