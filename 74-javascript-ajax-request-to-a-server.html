@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AJAX - Send a Request To a Server</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<p>O objeto XMLHttpRequest é usado para trocar dados com um servidor.</p>
+
+<h2>Send a Request To a Server</h2>
+
+<p>Para enviar uma solicitação para um servidor, usamos os métodos open () e send () do objeto XMLHttpRequest:</p>
+
+<code>
+xhttp.open("GET", "ajax_info.txt", true); <br>
+xhttp.send();
+</code>
+
+<h2>GET or POST?</h2>
+
+<p>O GET é mais simples e rápido que o POST e pode ser usado na maioria dos casos. No entanto, sempre use solicitações POST quando:</p>
+
+<ul>
+    <li>Um arquivo em cache não é uma opção (atualize um arquivo ou banco de dados no servidor).</li>
+    <li>Enviando uma grande quantidade de dados para o servidor (o POST não tem limitações de tamanho).</li>
+    <li>Enviando a entrada do usuário (que pode conter caracteres desconhecidos), o POST é mais robusto e seguro que o GET.</li>
+</ul>
+
+<h2>The url - A File On a Server</h2>
+
+<p>O parâmetro url do método open () é um endereço para um arquivo em um servidor:</p>
+
+<code>xhttp.open("GET", "ajax_test.asp", true);</code>
+
+<p>O arquivo pode ser qualquer tipo de arquivo, como .txt e .xml, ou arquivos de script do servidor, como .asp e .php (que podem executar ações no servidor antes de enviar a resposta de volta).</p>
+
+<h2>Asynchronous - True or False?</h2>
+
+<p>As solicitações do servidor devem ser enviadas de forma assíncrona. O parâmetro async do método open () deve ser configurado como true:</p>
+
+<code>xhttp.open("GET", "ajax_test.asp", true);</code>
+
+<p>Ao enviar de forma assíncrona, o JavaScript não precisa aguardar a resposta do servidor, mas pode, em vez disso:</p>
+
+<ul>
+    <li>executar outros scripts enquanto aguarda a resposta do servidor</li>
+    <li>lidar com a resposta depois que a resposta estiver pronta</li>
+</ul>
+
+<h2>Synchronous Request</h2>
+
+<p>Para executar uma solicitação síncrona, altere o terceiro parâmetro no método open () para false:</p>
+
+<code> xhttp.open("GET", "ajax_info.txt", false);</code>
+
+<p>Às vezes async = false são usados ​​para testes rápidos. Você também encontrará solicitações síncronas no código JavaScript mais antigo. Como o código irá aguardar a conclusão do servidor, não há necessidade de uma função onreadystatechange:</p>
+
+<p>OBS: XMLHttpRequest síncrono (async = false) não é recomendado porque o JavaScript parará de executar até que a resposta do servidor esteja pronta. Se o servidor estiver ocupado ou lento, o aplicativo será interrompido ou interrompido. <br>
+O XMLHttpRequest síncrono está em processo de ser removido do padrão da Web, mas esse processo pode levar muitos anos. <br>
+Ferramentas modernas para desenvolvedores são encorajadas a avisar sobre o uso de solicitações síncronas e podem lançar uma exceção InvalidAccessError quando ocorrer.
+</p>
+
+</body>
+</html>
