@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AJAX Introduction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<p>AJAX é o sonho de um desenvolvedor, porque você pode:</p>
+    
+<ul>
+    <li>Ler dados de um servidor da web - após a página ter sido carregada</li>
+    <li>Atualizar uma página da web sem recarregar a página</li>
+    <li>Enviar dados para um servidor da Web - em segundo plano</li>
+</ul>
+
+<div id="demo">
+<h2>The XMLHttpRequest Object</h2>
+<button type="button" onclick="loadDoc()">Change Content</button>
+</div>
+
+<script>
+function loadDoc() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("demo").innerHTML =
+        this.responseText;
+    }
+    };
+    xhttp.open("GET", "ajax_info.txt", true);
+    xhttp.send();
+}
+</script>
+
+<h2>What is AJAX?</h2>
+
+<p>AJAX = Asynchronous JavaScript And XML.</p>
+
+<p>AJAX não é uma linguagem de programação.</p>
+
+<p>AJAX usa apenas uma combinação de:</p>
+
+<ul>
+    <li>Um objeto XMLHttpRequest interno do navegador (para solicitar dados de um servidor da Web)</li>
+    <li>DOM de JavaScript e HTML (para exibir ou usar os dados)</li>
+</ul>
+
+<p>OBS: AJAX é um nome enganador. Aplicativos AJAX podem usar XML para transportar dados, mas é igualmente comum transportar dados como texto simples ou texto JSON.</p>
+
+<p>O AJAX permite que as páginas da web sejam atualizadas de forma assíncrona, trocando dados com um servidor da Web nos bastidores. Isso significa que é possível atualizar partes de uma página da Web, sem recarregar a página inteira.</p>
+
+<h2>How AJAX Works</h2>
+
+<img src="https://www.w3schools.com/js/pic_ajax.gif">
+
+<ul>
+    <li>1. Um evento ocorre em uma página da web (a página é carregada, um botão é clicado)</li>
+    <li>2. Um objeto XMLHttpRequest é criado pelo JavaScript</li>
+    <li>3. O objeto XMLHttpRequest envia uma solicitação para um servidor da web</li>
+    <li>4. O servidor processa a solicitação</li>
+    <li>5. O servidor envia uma resposta de volta para a página da web</li>
+    <li>6. A resposta é lida por JavaScript</li>
+    <li>7. A ação apropriada (como atualização de página) é executada pelo JavaScript</li>
+</ul>
+
+</body>
+</html>
